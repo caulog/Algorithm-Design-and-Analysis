@@ -5,7 +5,7 @@ public class matrix_recommender{
     public static void main(String[] args) throws Exception{
         // File read matrices test
         if(args.length == 1){
-            System.out.println("\n\n----Follower Recommender----");
+            System.out.println("\n----Matrix Recommender----");
             // fill the matrix
             File matrix_file = new File (args[0]);
             Scanner file_reader = new Scanner(matrix_file);
@@ -20,7 +20,9 @@ public class matrix_recommender{
             print_matrix(matrix);
 
             // call matrix multiply
+            long start = System.nanoTime();
             int[][] follower_recomendations = multiply_matrix(matrix, matrix);
+            long stop = System.nanoTime();
 
             // print matrix
             System.out.println("\nFollower Recommendation Matrix:");
@@ -35,46 +37,13 @@ public class matrix_recommender{
                 for (int j = 0; j < n; j++){
                     if(follower_recomendations[i][j] > max && i != j && matrix[i][j] != 1){
                         max = follower_recomendations[i][j];
-                        index = j;
+                        index = j+1;
                     }
                 }
-                //char user1 = (char)(65+i);
-                //char user2 = (char)(65+index);
-                System.out.println(i+1 + " should follow " + (index+1));
+                System.out.println(i+1 + " should follow " + (index));
             }
-
-        } else if (args.length == 2){
-            System.out.println("\n\n----User Input Test----");
-            // fill matrix one
-            File matrix_file1 = new File (args[0]);
-            Scanner file_reader = new Scanner(matrix_file1);
-            int n = get_size(matrix_file1, file_reader);
-            file_reader.close();
-            file_reader = new Scanner(matrix_file1);
-            int[][] matrix1 = get_matrix(n, matrix_file1, file_reader);
-            file_reader.close();
-            //print input matrix:
-            System.out.println("Input matrix 1:");
-            print_matrix(matrix1);
-
-            // fill matrix two
-            File matrix_file2 = new File (args[1]);
-            file_reader = new Scanner(matrix_file2);
-            n = get_size(matrix_file2, file_reader);
-            file_reader.close();
-            file_reader = new Scanner(matrix_file2);
-            int[][] matrix2 = get_matrix(n, matrix_file2, file_reader);
-            file_reader.close();
-            //print input matrix:
-            System.out.println("\nInput matrix 2:");
-            print_matrix(matrix2);
-
-            // call matrix multiply
-            int[][] result = multiply_matrix(matrix1, matrix2);
-
-            // print matrix
-            System.out.println("\nMatrix1 * Matrix2:");
-            print_matrix(result);
+            // print time
+            System.out.println("\nTime: " + (stop-start));
         }else{
             // make sure there is an input file
             System.out.println("\nInvalid command line arguments.\n**Cannot find .txt file for matrix inputs**\n");

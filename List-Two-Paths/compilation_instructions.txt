@@ -1,0 +1,23 @@
+/////////////////////\\\\\\\\\\\\\\\\\\\\\
+    LIST_RECCOMENDER.JAVA INSTRUCTIONS
+To compile in terminal:
+javac list_recommender.java
+
+To run with given A16 adjacency list:
+java list_recommender A16-edge.txt
+
+To run with given A1024 adjacency list:
+java list_recommender A1024-edge.txt
+/////////////////////\\\\\\\\\\\\\\\\\\\\\
+
+/////////////////////\\\\\\\\\\\\\\\\\\\\\\
+    MATRIX_RECCOMENDER.JAVA INSTRUCTIONS 
+To compile in terminal:
+javac matrix_recommender.java
+
+To run with given A16 adjacency list:
+java matrix_recommender A16.txt
+
+To run with given A1024 adjacency list:
+java matrix_recommender A1024.txt
+/////////////////////\\\\\\\\\\\\\\\\\\\\\\
