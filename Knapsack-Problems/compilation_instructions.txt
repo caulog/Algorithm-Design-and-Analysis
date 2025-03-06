@@ -1,0 +1,24 @@
+////////     KNAPSACK     \\\\\\\\
+To compile:
+javac knapsack.java
+
+To run with a small file input:
+java knapsack small.txt
+
+To run with a medium file input:
+java knapsack medium.txt
+
+To run with a large file input:
+java knapsack large.txt
+
+
+////////    BITSTRINGS     \\\\\\\\
+To compile:
+javac bitstrings.java
+
+To run:
+java bitstrings
+
+To change size n:
+change the value of 'n = _' in line 13 and recompile
+

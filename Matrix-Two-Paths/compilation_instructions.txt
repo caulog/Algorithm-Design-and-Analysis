@@ -1,0 +1,9 @@
+To compile in terminal:
+javac follower_recommender.java
+
+To run with given follower_recommender adjacency matrix:
+java follower_recommender followers.txt 
+
+To run with two matrices in .txt file: 
+NOTE: matrices must be sqaure, power of 2 dimension and contain integers
+java follower_recommender matrix1_file_name.txt matrix2_file_name.txt

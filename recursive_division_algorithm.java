@@ -1,6 +1,6 @@
 public class recursive_division_algorithm{
     public static void main(String[] args){
-        int[] ans = divide(13, 2);
+        int[] ans = divide(0, 2);
         
         System.out.println(ans[0] + ", " + ans[1]);
     }
